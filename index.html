@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JCE Defensa de Nota</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">JCE • ACTIVIDAD INTERACTIVA</div>
+        <h1>🎯 Defensa de Nota</h1>
+        <p id="activitySubtitle">Preguntas cruzadas entre grupos</p>
+      </div>
+      <div class="top-actions">
+        <button class="btn btn-ghost" id="btnResetGame">Reiniciar ronda</button>
+        <button class="btn btn-primary" id="btnNewActivity">Nueva actividad</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <button class="nav-item active" data-view="dashboard">🏠 Inicio</button>
+        <button class="nav-item" data-view="game">🎡 Juego</button>
+        <button class="nav-item" data-view="groups">👥 Grupos y preguntas</button>
+        <button class="nav-item" data-view="results">📊 Resultados</button>
+        <button class="nav-item" data-view="settings">⚙️ Configuración</button>
+      </aside>
+
+      <main class="content">
+        <section id="view-dashboard" class="view active"></section>
+        <section id="view-game" class="view"></section>
+        <section id="view-groups" class="view"></section>
+        <section id="view-results" class="view"></section>
+        <section id="view-settings" class="view"></section>
+      </main>
+    </div>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card" id="modalCard"></div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
